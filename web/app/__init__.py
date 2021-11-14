@@ -82,7 +82,7 @@ def subclass_data_del(name_class, name_subclass):
     return redirect('/class_data')
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=False)
     
 
 app.db.close()

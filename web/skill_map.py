@@ -8,5 +8,5 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     print(f'----> USE: localhost:{args.port}')
-    app.run(host=args.host, port=args.port, debug=True)
+    app.run(host=args.host, port=args.port, debug=False)
     
