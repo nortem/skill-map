@@ -1,7 +1,7 @@
 # Skill map
 Skill map application is designed to create a list of classes and objects.
 
-########## Usage (docker)
+## Usage (docker)
 
 Example for debian-based system:
 '''
@@ -17,7 +17,7 @@ docker-compose up
 '''
 The app will be available on http://localhost:5000/ (port = 5000).
 
-########## Usage (no docker) 
+## Usage (no docker) 
 The app can be launch without docker. 
 Requirements:
 - Python 3.7.
