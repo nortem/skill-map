@@ -1,0 +1,36 @@
+{% extends 'base.html'%}
+
+{% block body %}
+<div class="row py-lg-5">
+    <div class="col-lg-6 col-md-8 mx-auto">
+    <h2>Добавление данных</h2>
+    <hr class="my-4">
+    <h4>Добавить новый класс</h4>
+    <form method="post">
+        <label for="new_class" class="form-label">Название класса:</label>
+        <input type="text" name="new_class" id="new_class" class="form-control"><br>
+        <input type='submit' class="btn btn-success" value="Добавить"><br>
+    </form>
+    <hr class="my-4">
+    <h4>Добавить объект</h4>
+    <form method="post">
+        <label for="class_select" class="form-label">Название класса:</label>
+        <select class="form-select" name="class_select" id="class_select" required="">
+            <option value="">Choose...</option>
+            {% for name_class in labels %}
+                {% if name_class != '' %}
+                    <option value={{ name_class }}>{{ name_class }}</option>
+                {% endif %}
+            {% endfor %}
+        </select><br>
+        
+        <label for="new_subclass" class="form-label">Название объекта:</label>
+        <input type="text" name="new_subclass" id="new_subclass" class="form-control"><br>
+
+        <label for="text_subclass" class="form-label">Описание объекта:</label>
+        <textarea name='text_subclass' d="text_subclass" class="form-control"></textarea><br>
+        <input type='submit' class="btn btn-success" value="Добавить"><br>
+    </form>
+</div>
+</div>
+{% endblock %}

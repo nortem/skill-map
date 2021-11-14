@@ -1,0 +1,18 @@
+{% extends 'base.html'%}
+
+{% block body %}
+<div class="row py-lg-5">
+    <div class="col-lg-6 col-md-8 mx-auto">
+      {% if not flag_label %}
+        В базе данных нет ни одной записи. Добавить информацию можно во вкладке "Создать запись".  
+      {% endif %}
+      <div id='chart' class='chart'”></div>
+      <script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
+        <script type='text/javascript'>
+            var graphs = {{graphJSON | safe}};
+            Plotly.plot('chart',graphs,{});
+        </script>
+    </div>
+  </div>
+{% endblock %}
+

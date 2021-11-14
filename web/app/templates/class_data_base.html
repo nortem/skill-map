@@ -1,0 +1,34 @@
+{% extends 'base.html'%}
+
+{% block body %}
+<div class="container">
+  <div class="col-1">
+
+  </div>
+  <footer class="row row-cols-5 py-5 my-5 border-top">
+    <div class="col">
+      {% for name_class in labels %}
+        <h5>{{ name_class }}</h5>
+        {% if name_class in info%}
+          <ul class="nav flex-column">
+          {% for name_subclass in info[name_class] %}
+            <li class="nav-item mb-2"><a href="/class_data/{{ name_class }}/{{ name_subclass }}" class="nav-link p-0 text-muted">{{ name_subclass }}</a></li>
+          {% endfor %}
+          </ul>
+        {% endif %}
+      {% endfor %}
+    </div>
+
+    <div class="col-1">
+
+    </div>
+
+    <div class="col-8">
+      {% block body_info %}{% endblock %}
+    </div>
+   
+  </footer>
+</div>
+
+{% endblock %}
+

@@ -1,0 +1,14 @@
+{% extends 'class_data_base.html'%}
+
+{% block body_info %}
+<h2>{{ info_subclass['name_class'] }}</h2> 
+<h5>{{ info_subclass['name_subclass'] }}</h5> 
+<br>
+<p class="lead text-muted">{{  info[info_subclass['name_class']][info_subclass['name_subclass']] }}</p>
+<br>
+<br>
+<br>
+<a href="/new_data" class="btn btn-success">Редактировать</a>
+<a href="/class_data/{{ info_subclass['name_class'] }}/{{ info_subclass['name_subclass'] }}/del" class="btn btn-danger">Удалить</a>
+{% endblock %}
+
