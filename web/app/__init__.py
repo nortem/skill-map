@@ -14,7 +14,6 @@ app.db = Redis(**Config['REDIS_KWARGS'], decode_responses=True)
 def main_page():
     return render_template('main_page.html')
 
-# <li><a href="{{ url_for('new_data') }}">Добавить новые данные</a></li>
 @app.route('/new_data', methods=['GET', 'POST'])
 def new_data():
     if request.method == "POST":
