@@ -30,7 +30,6 @@ def new_data():
                 return redirect('/class_data')
         except redis.exceptions.RedisError:
             return "При добавлении  произошла ошибка"
-            
     labels = tl.read_labels_db(app.db)
     return render_template('new_data.html', labels=labels)
 
@@ -56,14 +55,12 @@ def subclass_data(name_class, name_subclass):
 
 @app.route('/class_data/<string:name_class>/<string:name_subclass>/del', methods=['GET'])
 def subclass_data_del(name_class, name_subclass):
-    
     dict_class = app.db.hgetall(name_class)
     if name_subclass in dict_class:
         dict_class.pop(name_subclass, None)
         app.db.delete(name_class)
         if dict_class:
             app.db.hmset(name_class, dict_class)
-    
     return redirect('/class_data')
 
 if __name__ == '__main__':
