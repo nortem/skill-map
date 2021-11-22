@@ -19,7 +19,7 @@
             <option value="">Choose...</option>
             {% for name_class in labels %}
                 {% if name_class != '' %}
-                    <option value={{ name_class }}>{{ name_class }}</option>
+                    <option value={{ '$'.join(name_class.split()) }}>{{ name_class }}</option>
                 {% endif %}
             {% endfor %}
         </select><br>

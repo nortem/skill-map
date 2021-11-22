@@ -1,1 +1,0 @@
-Config = dict( REDIS_KWARGS = {'host': 'redis', 'port': 6379, 'db': 0})

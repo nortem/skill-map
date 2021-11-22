@@ -25,3 +25,39 @@ Requirements:
 - Redis server 
 
 You need set the correct host:port settings for the redis db. (/web/app/my_config.py).
+
+
+# Example
+
+"Создать запись"
+
+How can you add a class?
+
+1. Write the name of the class in the box
+2. Click the button "Добавить"
+![alt text](pic_readme/1.png)
+
+How can you add a object?
+
+3. All added classes will appear in the class selection window. Select the class to which the object belongs.
+![alt text](pic_readme/2.png)
+
+4. Fill in all the fields. Information about the object can be left blank.
+5. Click the button "Добавить"
+![alt text](pic_readme/3.png)
+
+"Просмотр записей"
+
+6. On the left there will be a list of classes and objects belonging to them.
+7. You can click on the object.
+8. Information about the object will appear here.
+9. Сhange the information about the object, click on the "Редактировать" button and fill in the information as in paragraph 3.
+10. Delete the object.
+![alt text](pic_readme/4.png)
+
+"Просмотр карты"
+
+11. Added class.
+12. Number of objects + 1.
+13. The "Новый класс" class has no objects
+![alt text](pic_readme/5.png)

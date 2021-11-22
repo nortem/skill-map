@@ -1,5 +1,5 @@
 import argparse
-from app import app
+from app import main
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter)
@@ -8,5 +8,5 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     print(f'----> USE: localhost:{args.port}')
-    app.run(host=args.host, port=args.port, debug=False)
+    main.app.run(host=args.host, port=args.port, debug=False)
     
